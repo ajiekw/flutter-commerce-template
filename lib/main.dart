@@ -4,9 +4,41 @@ import 'package:flutter_commerce/constants.dart';
 void main() => runApp(FrontMarket());
 
 class FrontMarket extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      title: "Camera Store",
+      home: _FrontMarket(),
+      theme: ThemeData(
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: dGeneralColor),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+    );
+  }
+}
+
+class _FrontMarket extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        leading: Icon(
+          Icons.menu,
+          color: Colors.grey,
+        ),
+        title: const Text(
+          'Camera Market',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.white,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: null,
+          )
+        ],
+      ),
+    );
   }
 }
