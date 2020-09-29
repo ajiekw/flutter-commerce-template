@@ -27,14 +27,19 @@ class _FrontMarket extends StatelessWidget {
           Icons.menu,
           color: Colors.grey,
         ),
-        title: const Text(
-          'Camera Market',
+        centerTitle: true,
+        title: Text(
+          "Cameras",
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
             onPressed: null,
           )
         ],
