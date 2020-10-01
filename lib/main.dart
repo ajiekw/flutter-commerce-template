@@ -79,25 +79,32 @@ class _CategoriesState extends State<Categories> {
   }
 
   Widget buildCategory(int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: DefaultPadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            categories[index],
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: selectedIndex == index ? Colors.green : Colors.grey,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          selectedIndex = index;
+        });
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: DefaultPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              categories[index],
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: selectedIndex == index ? Colors.green : Colors.grey,
+              ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: DefaultPadding / 4),
-            height: 2,
-            width: 30,
-            color: selectedIndex == index ? Colors.green : Colors.transparent,
-          )
-        ],
+            Container(
+              margin: EdgeInsets.only(top: DefaultPadding / 4),
+              height: 2,
+              width: 30,
+              color: selectedIndex == index ? Colors.green : Colors.transparent,
+            )
+          ],
+        ),
       ),
     );
   }
