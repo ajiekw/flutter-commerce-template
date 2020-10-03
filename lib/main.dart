@@ -19,6 +19,7 @@ class FrontMarket extends StatelessWidget {
   }
 }
 
+//AppBar
 class _FrontMarket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class _FrontMarket extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "Cameras",
+          "Camera Store",
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.white,
@@ -52,11 +53,17 @@ class _FrontMarket extends StatelessWidget {
           )
         ],
       ),
-      body: Categories(),
+      body: Column(
+        children: [
+          Categories(), //List menu
+          Content() //Content Body
+        ],
+      ),
     );
   }
 }
 
+//List Menu
 class Categories extends StatefulWidget {
   @override
   _CategoriesState createState() => _CategoriesState();
@@ -108,10 +115,43 @@ class _CategoriesState extends State<Categories> {
               height: 2,
               width: 30,
               color: selectedIndex == index ? Colors.green : Colors.transparent,
-            )
+            ),
           ],
         ),
       ),
+    );
+  }
+}
+
+//Content Body
+class Content extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(DefaultPadding / 2),
+          child: Container(
+            height: 150,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(DefaultPadding),
+          child: Container(
+            height: 150,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
