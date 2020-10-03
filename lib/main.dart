@@ -27,7 +27,7 @@ class _FrontMarket extends StatelessWidget {
         elevation: 0,
         leading: Icon(
           Icons.menu,
-          color: Colors.grey,
+          color: Colors.green,
         ),
         centerTitle: true,
         title: Text(
@@ -37,11 +37,17 @@ class _FrontMarket extends StatelessWidget {
         backgroundColor: Colors.white,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: Colors.green,
+            ),
             onPressed: null,
           ),
           IconButton(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.green,
+            ),
             onPressed: null,
           )
         ],
