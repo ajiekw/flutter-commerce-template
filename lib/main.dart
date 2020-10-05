@@ -127,31 +127,13 @@ class _CategoriesState extends State<Categories> {
 class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(DefaultPadding / 2),
-          child: Container(
-            height: 150,
-            width: 150,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: BorderRadius.circular(10),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(DefaultPadding),
-          child: Container(
-            height: 150,
-            width: 150,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: BorderRadius.circular(10),
-            ),
-          ),
-        ),
-      ],
+    return Container(
+      height: 150,
+      width: 150,
+      decoration: BoxDecoration(
+        color: Colors.grey,
+        borderRadius: BorderRadius.circular(10),
+      ),
     );
   }
 }
