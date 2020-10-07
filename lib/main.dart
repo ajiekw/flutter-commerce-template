@@ -134,6 +134,7 @@ class Content extends StatelessWidget {
         color: Colors.grey,
         borderRadius: BorderRadius.circular(10),
       ),
+      child: Image.asset("assets/images/unnamed.png"),
     );
   }
 }

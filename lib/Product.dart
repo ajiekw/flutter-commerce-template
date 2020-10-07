@@ -18,7 +18,7 @@ List<Product> products = [
       id: 1,
       title: "Cam 1",
       price: 200,
-      image: "assets/images/cam1.svg",
+      image: "assets/images/unnamed.png",
       description: "product number 1"),
   Product(
       id: 2,
