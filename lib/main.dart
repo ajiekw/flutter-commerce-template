@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Product.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_commerce/constants.dart';
 
@@ -56,7 +57,15 @@ class _FrontMarket extends StatelessWidget {
       body: Column(
         children: [
           Categories(), //List menu
-          Content() //Content Body
+          Container(
+            height: 120,
+            width: 120,
+            decoration: BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Image.asset("assets/images/unnamed.png"),
+          ) //Content Body
         ],
       ),
     );
@@ -124,17 +133,3 @@ class _CategoriesState extends State<Categories> {
 }
 
 //Content Body
-class Content extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      width: 150,
-      decoration: BoxDecoration(
-        color: Colors.grey,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Image.asset("assets/images/unnamed.png"),
-    );
-  }
-}
