@@ -61,7 +61,7 @@ class _FrontMarket extends StatelessWidget {
             height: 120,
             width: 120,
             decoration: BoxDecoration(
-              color: Colors.green,
+              color: Colors.grey[300],
               borderRadius: BorderRadius.circular(20),
             ),
             child: Image.asset("assets/images/unnamed.png"),
