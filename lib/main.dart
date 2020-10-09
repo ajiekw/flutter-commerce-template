@@ -55,16 +55,22 @@ class _FrontMarket extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Categories(), //List menu
+          Categories(),
           Container(
-            height: 120,
-            width: 120,
+            padding: EdgeInsets.all(DefaultPadding),
+            height: 130,
+            width: 130,
             decoration: BoxDecoration(
               color: Colors.grey[300],
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Image.asset("assets/images/unnamed.png"),
+            child: Image.asset(products[0].image),
+          ),
+          Text(
+            products[0].title,
+            textAlign: TextAlign.center,
           ) //Content Body
         ],
       ),
