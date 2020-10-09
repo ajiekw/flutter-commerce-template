@@ -66,12 +66,16 @@ class _FrontMarket extends StatelessWidget {
               color: Colors.grey[300],
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Image.asset(products[0].image),
-          ),
-          Text(
-            products[0].title,
-            textAlign: TextAlign.center,
-          ) //Content Body
+            child: Column(
+              children: [
+                Image.asset(products[0].image),
+                Text(
+                  products[0].title,
+                  style: TextStyle(color: Colors.black),
+                )
+              ],
+            ),
+          ), //Content Body
         ],
       ),
     );
