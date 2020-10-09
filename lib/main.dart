@@ -58,26 +58,38 @@ class _FrontMarket extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Categories(),
-          Container(
-            padding: EdgeInsets.all(DefaultPadding),
-            height: 130,
-            width: 130,
-            decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              children: [
-                Image.asset(products[0].image),
-                Text(
-                  products[0].title,
-                  style: TextStyle(color: Colors.black),
-                )
-              ],
-            ),
-          ), //Content Body
+          productImage(),
+          productTitle(), //Content Body
         ],
       ),
+    );
+  }
+
+  Column productTitle() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(top: DefaultPadding / 4, left: 50),
+          child: Text(
+            products[0].title,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Container productImage() {
+    return Container(
+      padding: EdgeInsets.all(DefaultPadding),
+      height: 130,
+      width: 130,
+      decoration: BoxDecoration(
+        color: Colors.grey[300],
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Image.asset(products[0].image),
     );
   }
 }
