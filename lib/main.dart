@@ -56,16 +56,23 @@ class _FrontMarket extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: <Widget>[
           Categories(),
-          productImage(),
-          productTitle(), //Content Body
+          ProductImage(),
+          ProductTitle(), //Content Body
         ],
       ),
     );
   }
+}
 
-  Column productTitle() {
+class ProductTitle extends StatelessWidget {
+  const ProductTitle({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
@@ -79,8 +86,15 @@ class _FrontMarket extends StatelessWidget {
       ],
     );
   }
+}
 
-  Container productImage() {
+class ProductImage extends StatelessWidget {
+  const ProductImage({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(DefaultPadding),
       height: 130,
