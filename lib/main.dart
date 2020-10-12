@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'Product.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_commerce/constants.dart';
@@ -58,8 +59,16 @@ class _FrontMarket extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Categories(),
-          ProductImage(),
-          ProductTitle(), //Content Body
+          Expanded(
+            child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.75,
+              ),
+              itemBuilder: (context, index) => ProductImage(),
+            ),
+          )
         ],
       ),
     );
@@ -89,8 +98,13 @@ class ProductTitle extends StatelessWidget {
 }
 
 class ProductImage extends StatelessWidget {
+  final Product product;
+  final Function press;
+
   const ProductImage({
     Key key,
+    this.product,
+    this.press,
   }) : super(key: key);
 
   @override
