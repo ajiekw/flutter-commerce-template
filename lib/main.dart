@@ -63,45 +63,20 @@ class _FrontMarket extends StatelessWidget {
             child: GridView.builder(
               itemCount: products.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.75,
-              ),
-              itemBuilder: (context, index) => ProductImage(),
+                  crossAxisCount: 2, childAspectRatio: 0.75),
+              itemBuilder: (context, index) => Items(),
             ),
-          )
+          ),
         ],
       ),
     );
   }
 }
 
-class ProductTitle extends StatelessWidget {
-  const ProductTitle({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(top: DefaultPadding / 4, left: 50),
-          child: Text(
-            products[0].title,
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ProductImage extends StatelessWidget {
+class Items extends StatelessWidget {
   final Product product;
   final Function press;
-
-  const ProductImage({
+  const Items({
     Key key,
     this.product,
     this.press,
@@ -109,15 +84,27 @@ class ProductImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(DefaultPadding),
-      height: 130,
-      width: 130,
-      decoration: BoxDecoration(
-        color: Colors.grey[300],
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Image.asset(products[0].image),
+    return Column(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(DefaultPadding),
+          height: 180,
+          width: 160,
+          decoration: BoxDecoration(
+            color: Colors.grey[850],
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Image.asset(products[0].image),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: DefaultPadding / 4),
+          child: Text(
+            products[0].title,
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
+        Text("\1.000.000 Rp")
+      ],
     );
   }
 }
