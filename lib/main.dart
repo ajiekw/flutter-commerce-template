@@ -35,7 +35,7 @@ class _FrontMarket extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Camera Store",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.green),
         ),
         backgroundColor: Colors.white,
         actions: <Widget>[
@@ -64,7 +64,9 @@ class _FrontMarket extends StatelessWidget {
               itemCount: products.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, childAspectRatio: 0.75),
-              itemBuilder: (context, index) => Items(),
+              itemBuilder: (context, index) => Items(
+                product: products[index],
+              ),
             ),
           ),
         ],
@@ -94,12 +96,12 @@ class Items extends StatelessWidget {
             color: Colors.grey[850],
             borderRadius: BorderRadius.circular(30),
           ),
-          child: Image.asset(products[0].image),
+          child: Image.asset(product.image),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: DefaultPadding / 4),
           child: Text(
-            products[0].title,
+            product.title,
             style: TextStyle(color: Colors.black),
           ),
         ),
