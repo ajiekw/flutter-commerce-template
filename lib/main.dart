@@ -28,9 +28,10 @@ class _FrontMarket extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(
-          Icons.menu,
+        leading: IconButton(
+          icon: Icon(Icons.menu),
           color: Colors.green,
+          onPressed: () {},
         ),
         centerTitle: true,
         title: Text(
@@ -170,5 +171,3 @@ class _CategoriesState extends State<Categories> {
     );
   }
 }
-
-//Content Body
