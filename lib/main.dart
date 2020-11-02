@@ -28,11 +28,6 @@ class _FrontMarket extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          color: Colors.green,
-          onPressed: () {},
-        ),
         centerTitle: true,
         title: Text(
           "Camera Store",
@@ -55,6 +50,16 @@ class _FrontMarket extends StatelessWidget {
             onPressed: null,
           )
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text("Camera Store"),
+            )
+          ],
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
