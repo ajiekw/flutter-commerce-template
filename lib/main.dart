@@ -28,6 +28,13 @@ class _FrontMarket extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: Icon(Icons.list),
+            color: Colors.green,
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
         centerTitle: true,
         title: Text(
           "Camera Store",
