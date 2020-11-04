@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'Product.dart';
-import 'package:flutter/semantics.dart';
 import 'package:flutter_commerce/constants.dart';
 
 void main() => runApp(FrontMarket());
