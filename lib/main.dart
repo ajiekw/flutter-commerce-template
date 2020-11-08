@@ -63,6 +63,15 @@ class _FrontMarket extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               child: Text("Camera Store"),
+            ),
+            ListTile(
+              title: Text("Profile"),
+            ),
+            ListTile(
+              title: Text("Setting"),
+            ),
+            ListTile(
+              title: Text("Logout"),
             )
           ],
         ),
