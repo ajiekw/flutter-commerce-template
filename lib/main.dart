@@ -65,12 +65,15 @@ class _FrontMarket extends StatelessWidget {
               child: Text("Camera Store"),
             ),
             ListTile(
+              leading: Icon(Icons.face),
               title: Text("Profile"),
             ),
             ListTile(
+              leading: Icon(Icons.settings),
               title: Text("Setting"),
             ),
             ListTile(
+              leading: Icon(Icons.arrow_back),
               title: Text("Logout"),
             )
           ],
