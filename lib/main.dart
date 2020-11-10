@@ -72,9 +72,14 @@ class _FrontMarket extends StatelessWidget {
               leading: Icon(Icons.settings),
               title: Text("Setting"),
             ),
+            Divider(),
             ListTile(
               leading: Icon(Icons.arrow_back),
               title: Text("Logout"),
+            ),
+            Divider(),
+            ListTile(
+              title: Text("Beta Release"),
             )
           ],
         ),
